@@ -12,8 +12,11 @@ public with sharing class OpportunityTriggerHandler extends TriggerHandler{
         // }
 
     }
+    public override void afterUpdate(){
+       ActualizarMontosparaCuenta((List<Opportunity>)Trigger.new,(Map<ID, Opportunity>)Trigger.oldMap);
+    }
 
-    private void MarcarRevisionEnOportunidad(Map<ID, Opportunity>mapOldOppRecords){
+    private void MarcarRevisionEnOportunidad(Map <ID, Opportunity> mapOldOppRecords){
         for(Opportunity currentOpportunity: (List<Opportunity>)Trigger.new){
             Opportunity oldOppRecord = mapOldOppRecords.get(currentOpportunity.Id);
             if( oldOppRecord.Type!=currentOpportunity.Type &&
@@ -23,4 +26,18 @@ public with sharing class OpportunityTriggerHandler extends TriggerHandler{
                 }
                     }
         }
+
+    
+        private void ActualizarMontosparaCuenta(List <Opportunity> lstNewOppRecord, Map <ID, Opportunity> mapOldOppRecords){
+            Set<ID> setAccIds=new Set<ID>();
+            for(Opportunity currentOpportunity: lstNewOppRecord){
+                Opportunity oldOppRecord=mapOldOppRecords.get(currentOpportunity.Id);
+                if(currentOpportunity.AccountId!=NULL && oldOppRecord.Amount!=currentOpportunity.Amount){
+                    setAccIds.add(currentOpportunity.AccountId);
+                }
+
+            }
+            
+        }
     }
+
