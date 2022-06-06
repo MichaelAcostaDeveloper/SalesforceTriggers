@@ -197,8 +197,28 @@ Set<Id> idsCuentas=new Map<Id, sObject>([SELECT ID
                                         ORDER BY Name ASC LIMIT 3]).keySet();
 System.debug('idsCuentas: '+idsCuentas);
 
+//otra forma con el mismo ejercicio
+Set<id> idsCuentasr=mapaCuentas.keySet();
 
+//llenar mapa a partir de una lista
+List<Account> listaCuentasForMap = [SELECT id, Name, type
+                                    FROM Account
+                                    WHERE Type!='' ORDER BY Name ASC LIMIT 3];
+Map<Id,Account> mapaConCuentas= new Map<Id, Account>(listaCuentasForMap);
+System.debug('mapaConCuentas: '+mapaConCuentas);
 
+//otro ejercicio
+Account objetoCuenta=[SELECT id FROM Account LIMIT 1];
+Account objetoCuentaExtra=[SELECT id FROM Account
+                            WHERE ID != :objetoCuenta.Id LIMIT 1];
 
-                                                }
+List<Account> listaElementosCuenta=new List<Account>{objetoCuenta,objetoCuentaExtra};
+System.debug('listaElementosCuenta: '+listaElementosCuenta);
+System.debug('listaElementosCuenta ELEMENTO 0: '+listaElementosCuenta.get(0));
+System.debug('listaElementosCuenta ELEMENTO 1: '+listaElementosCuenta.get(1));
+
+//otro ejercicio
+Set<Id> SetDeIds=(new Map<Id,Account>(listaElementosCuenta)).keySet();
+System.debug('setDeIds: '+setDeIds);
+ }
 }
