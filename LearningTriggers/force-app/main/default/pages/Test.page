@@ -1,0 +1,15 @@
+<apex:page standardController="Test__c">
+<apex:form>
+          <apex:pageBlock title="Edit Test">
+                    <apex:pageBlockSection columns="1">
+                              <apex:inputField value="{!Test__c.Name}"/>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockButtons>
+                              <apex:commandButton action="{!save}" value="Save"/>
+                    </apex:pageBlockButtons>
+          </apex:pageBlock>
+
+</apex:form>
+
+</apex:page>
+
