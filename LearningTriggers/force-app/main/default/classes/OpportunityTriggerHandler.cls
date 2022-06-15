@@ -13,7 +13,7 @@ public with sharing class OpportunityTriggerHandler extends TriggerHandler{
 
     }
     public override void afterUpdate(){
-       ActualizarMontosparaCuenta((List<Opportunity>)Trigger.new,(Map<ID, Opportunity>)Trigger.oldMap);
+    ActualizarMontosparaCuenta((List<Opportunity>)Trigger.new,(Map<ID, Opportunity>)Trigger.oldMap);
     }
     public override void beforeInsert(){
         marcarOportunidadesPreferentes((List<Opportunity>)Trigger.new);

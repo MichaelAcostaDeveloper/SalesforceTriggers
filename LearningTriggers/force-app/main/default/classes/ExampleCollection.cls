@@ -184,7 +184,7 @@ system.debug('MAPA DE CUENTAS despues del put: '+mapaCuentas.containsKey(cuentaP
 
 //otro ejercicio
 List<Account> nuevaLista=new List<Account>();
-nuevaLista=[SELECT id, Name, Type FROM Account WHERE Type !='' 
+nuevaLista=[SELECT id, Name, Type FROM Account WHERE Type !=''
             ORDER BY Name ASC LIMIT 5];
 System.debug('Tamano mapa de cuentas: '+mapaCuentas.size());
 mapaCuentas.put(nuevaLista.get(4).ID, nuevaLista.get(4));
