@@ -1,0 +1,8 @@
+<apex:page>
+          <apex:pageBlock>
+                    <apex:pageMessage summary="Validation messages appear. This mens" severity="error" strength="2"></apex:pageMessage>
+                    <apex:pageMessage summary="Validation messages appear. This mens" severity="warning" strength="2"></apex:pageMessage>
+                    <apex:pageMessage summary="Validation messages appear. This mens" severity="confirm" strength="2"></apex:pageMessage>
+                    <apex:pageMessage summary="Validation messages appear. This mens" severity="info" strength="2"></apex:pageMessage>
+          </apex:pageBlock>
+</apex:page>

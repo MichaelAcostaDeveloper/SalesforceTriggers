@@ -1,6 +1,52 @@
-<apex:page>
-<!-- Begin Default Content REMOVE THIS -->
-<h1>Congratulations</h1>
-This is your new Page
-<!-- End Default Content REMOVE THIS -->
+<apex:page sidebar="true" showHeader="true">
+          <h1>Congratulations for learning Visual Force Pages!!!</h1>
+                    <p>I am making the first page</p>
+                    <p>I am learning the tag on vfp</p>
+          <apex:pageBlock title="FirstBlock">
+                    <apex:pageBlockSection title="FirstBlockSection">
+                              <apex:pageBlockSectionItem>Item1</apex:pageBlockSectionItem>
+                              <apex:pageBlockSectionItem>Item2</apex:pageBlockSectionItem>
+                              <apex:pageBlockSectionItem>Item3</apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection title="SecondBlockSection">
+                              <apex:pageBlockSectionItem>Item4</apex:pageBlockSectionItem>
+                              <apex:pageBlockSectionItem>Item5</apex:pageBlockSectionItem>
+                              <apex:pageBlockSectionItem>Item6</apex:pageBlockSectionItem>
+                              <apex:pageBlockSectionItem>Item7</apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+          </apex:pageBlock>
+
+          <apex:form>
+                    <apex:pageBlock title="SecondBlock">
+                              <apex:pageBlockSection title="FirstBlockSection">
+                                        <apex:pageBlockSectionItem>Item1</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item2</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item3</apex:pageBlockSectionItem>
+                              </apex:pageBlockSection>
+                              <apex:pageBlockSection title="SecondBlockSection">
+                                        <apex:pageBlockSectionItem>Item4</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item5</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item6</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item7</apex:pageBlockSectionItem>
+                              </apex:pageBlockSection>
+                              <apex:commandButton value="Save">this button is in the pageBlock</apex:commandButton>
+                    </apex:pageBlock>
+                    <apex:commandButton value="Send">this button is out in the pageBlock</apex:commandButton>
+          </apex:form>
+
+          <apex:form>
+                    <apex:pageBlock title="Botoneras">
+                              <apex:pageBlockSection>
+                                        <apex:pageBlockSectionItem>Item1</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item2</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item3</apex:pageBlockSectionItem>
+                                        <apex:pageBlockSectionItem>Item4</apex:pageBlockSectionItem>
+                              </apex:pageBlockSection>
+                              <apex:pageBlockButtons>
+                                        <apex:commandButton value="New"></apex:commandButton>
+                                        <apex:commandButton value="Delete"></apex:commandButton>
+                                        <apex:commandButton value="Renew"></apex:commandButton>
+                              </apex:pageBlockButtons>
+                    </apex:pageBlock>
+          </apex:form>
 </apex:page>

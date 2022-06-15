@@ -1,0 +1,15 @@
+<apex:page>
+          <h1>Please enter the correct information:</h1>
+          <apex:form>
+                    <apex:inputText ID="name">Enter name:</apex:inputText><br/><br/>
+                    <apex:inputText ID="age">Enter the age: </apex:inputText><br/><br/>
+                    <apex:inputText ID="username">Enter the username: </apex:inputText><br/><br/>
+                    <apex:inputSecret ID="password">Enter the password: </apex:inputSecret><br/><br/>
+                    <apex:inputTextarea ID="cover">Cover letter: </apex:inputTextarea><br/><br/>
+                    <apex:inputCheckbox id="employee">Are you enployed: </apex:inputCheckbox><br/><br/>
+                    <apex:commandButton value="Save"></apex:commandButton>
+          
+
+          </apex:form>
+
+</apex:page>
